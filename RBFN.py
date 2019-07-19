@@ -1,11 +1,3 @@
-"""
-File: RBFN.py
-Author: Octavio Arriaga
-Email: arriaga.camargo@email.com
-Github: https://github.com/oarriaga
-Description: Minimal implementation of a radial basis function network
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 
