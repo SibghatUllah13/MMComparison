@@ -1,3 +1,8 @@
+Requirements
+
+Python >= 3.5 
+
+
 # MMComparison
 The repository contains the main experimental setup including hyper parameter optimization for the comparison of meta-modeling techniques. 
 To run the code, first choose the right criteria (e.g. Noise Level, Function etc.) in the Accuracy folder and go to the desired experimental setup.
