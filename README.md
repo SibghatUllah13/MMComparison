@@ -25,7 +25,24 @@ Lastly, the folder `Results Compilation` contains several sub-folders which are 
 all the plots). Each of those sub-folders contain the file `Graph.ipynb` which produces the figures and plots for the results achieved.
 In the following, we describe the technical requirements as well the instructions to run the code in a sequential manner.
 
-Requirements
+# Requirements
+
+In this code, we make use of four python packages (among others), which are presented below in the table.
+In particular, `pyDOE` can be utilized for sampling plans and Design of Experiment (DoE).
+We employ the so-called `Latin Hypercube Sampling` based on the `pyDOE` package.  
+For the purpose of numerical optimization in the code, e.g., to maximize the acquisition function, we utilize the famous `L-BFGS` algorithm based on `SciPy` package.
+For implementation AEs and VAEs, we utilize the `PyTorch` framework.
+Finally, the main purpose of the `scikit-learn` package is to construct the Kriging surrogate, as well as data manipulation/wrangling in general 
+All four required packages can be installed by executing `pip install -r requirements.txt` from the main directory via the command line.
+
+| Package | Description |
+| --- | --- |
+| pyDOE | For sampling plans and Design of Experiment (DoE).  |
+| SciPy | For numerical optimization based on L-BFGS-B algorithm. |
+| PyTorch (cpu) | For implementing AEs and VAEs. |
+| scikit-learn | For constructing the Kriging surrogate, as well as data manipulation. |
+
+In the following, we describe how to reproduce the experimental setup and results mentioned in our paper.
 
 Python >= 3.5 
 
