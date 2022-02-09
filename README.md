@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3854910.svg)](https://doi.org/10.5281/zenodo.3854910)
+
 # An Empirical Investigation on (Surrogate) Modeling Techniques for Robust Optimization 
 Contains the code for empirically investigating the practicality of (surrogate) modeling techniques for finding robust solutions.
 Robust solutions are solutions that are immune to the uncertainty/noise in the decision/search variables.
