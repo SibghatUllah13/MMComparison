@@ -39,21 +39,23 @@ All four required packages can be installed by executing `pip install -r require
 | --- | --- |
 | pyDOE | For sampling plans and Design of Experiment (DoE).  |
 | SciPy | For numerical optimization based on L-BFGS-B algorithm. |
-| PyTorch (cpu) | For implementing AEs and VAEs. |
+| pandas | For data manipulation and transformation. |
 | scikit-learn | For constructing the Kriging surrogate, as well as data manipulation. |
 
 In the following, we describe how to reproduce the experimental setup and results mentioned in our paper.
 
-Python >= 3.5 
+# Citation
+## Paper Reference
+S. Ullah, H. Wang, S. Menzel, B. Sendhoff and T. Bäck, "An Empirical Comparison of Meta-Modeling Techniques for Robust Design Optimization," 2019 IEEE Symposium Series on Computational Intelligence (SSCI), 2019, pp. 819-828.
+## BibTex Reference
+`@inproceedings{ullah2019empirical`,\
+  `title={An empirical comparison of meta-modeling techniques for robust design optimization},`\
+  `author={Ullah, Sibghat and Wang, Hao and Menzel, Stefan and Sendhoff, Bernhard and Back, Thomas},`\
+  `booktitle={2019 IEEE Symposium Series on Computational Intelligence (SSCI)},`\
+  `pages={819--828},`\
+  `year={2019},`\
+  `organization={IEEE}`\
+`}`
 
-
-# MMComparison
-The repository contains the main experimental setup including hyper parameter optimization for the comparison of meta-modeling techniques. 
-To run the code, first choose the right criteria (e.g. Noise Level, Function etc.) in the Accuracy folder and go to the desired experimental setup.
-Run the Generate_Data_Sets.ipynb for the desired experimental evaluation and generate the data sets of input and output pairs.
-Then go to the Hyper_Parameter_Optimization and run the code for each Meta-Model technique e.g. Kriging etc. one by one for all sample points.
-The best Hyper_Parameters for the corresponding Meta Model and Sample points will be displayed. Manually select these hyper parameters and save them in the final comparison.ipynb file of your desired experimental evaluation.
-Run Final_Comparison.ipynb , it will generate the result files.
-To achieve the graphics, go to the results compilation folder and put the output files in your desired function evaluation and run the file
-Graph.ipynb
-##########################################################################
+# Acknowledgements
+This research has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement number 766186 (ECOLE).
