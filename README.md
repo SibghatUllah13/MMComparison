@@ -20,7 +20,7 @@ As the name suggests, these directories contain the code for a particular choice
 Within each of these directories, we further come up against six sub-directories which represent the test problem at hand.
 If we further explore, these directories contain two jupyter notebooks, namely `Generate_Data_Sets.ipynb` and `Final_Comparison.ipynb`.
 While the former contains the methods and routines for generating the training and testing data sets, the latter deals with constructing and 
-appraising the surrogate models. Outside, the folder `Hyper_Parameter_Optimization` six sub-folders which represent the choice of modeling techniques.
+appraising the surrogate models. Outside, the folder `Hyper_Parameter_Optimization` contains six sub-folders which represent the choice of modeling techniques.
 Each of these sub-folders further contains a jupyter notebook, titled `*_Hyper.ipynb`, where `*` serves as the choice of modeling technique, e.g., Kriging, Random Forest.
 This jupyter notebook contains the code for hyper parameter optimization for the chosen modeling technique.
 Lastly, the folder `Results Compilation` contains several sub-folders which are named after the test problem considered (apart from folder `Graphs` which simply contains
