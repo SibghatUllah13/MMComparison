@@ -44,6 +44,34 @@ All four required packages can be installed by executing `pip install -r require
 
 In the following, we describe how to reproduce the experimental setup and results mentioned in our paper.
 
+## 1. Generating the initial Data Set
+The first task in the experimental setup deals with the generation of initial data sets. This refers to specifying the coordinates
+of the sampling points to observe the functions responses. In our study, we alter the sample sizes to assess its impact on the performance of the
+surrogate model. To generate the initial training data, we enter inside the folder `Accuracy`, which is present in the main directory.
+Within this folder, we must select a particular sub-folder based on the noise level considered in the case. Note that each noise level affects the
+problem landscape in a different way.
+Inside the directory of the noise level, we have to select one of the six folders related to our test problem, e.g., ackley 2D, where we come across the notebook 
+`Generate_Data_Sets.ipynb`, which contains the methods and routines to generate the initial training data sets based on a variety of sample sizes.
+Note that this notebook will also generate the testing data set, which will be later utilized to assess the modeling asccuracy of the surrogate.
+
+## 2. Hyper-parameter Optimization
+After generating the initial data sets, we have to traverse back to the main directory, where we come across the folder `Hyper_Parameter_Optimization`.
+Inside this, there are six others directories, which are named after the modeling techniques considered in our study.
+These directories contain a jupyter notebook, titled `*_Hyper.ipynb`, where `*` serves as the choice of modeling technique, e.g., Kriging, Random Forest.
+This jupyter notebook contains the code for hyper parameter optimization for the chosen modeling technique.
+We have to utilize this code for each test scenario (noise level, problem, sample size) to find the best settings of hyper parameters, which will then be used when constructing the surrogate model. This is a crucial step, since it ensures the best quality surrogate model based on the sample size.
+
+## 3. Constructing and Appraising the Surrogate Models
+Once we retrieve the best configuration of hyper parameters, we can go back to the directory of our test scenario, i.e., by selecting relevant noise level and test problem.
+There, we also find another jupyter notebook, titled `Final_Comparison.ipynb`. Inside this, we have to manually save the best settings of hyper parameters
+for each test scenario. After that, we can run this notebook, which will construct the surrogate models, utilize them in the optimization, and appraise them
+based on the modeling accuracy and optimality. We can save these results to later utilize them to generate figures and plots.
+
+## 4. Plotting the Results
+Inside the main directory, we can traverse to the directory titled `Results Compilation`, which further contains the directories named after the test problems.
+Inside each of these sub-directories, there is a jupyter notebook, titled `Graph.ipynb`, which contains the necessary code to load the results and plot them.
+Note that we have to manually specify the names/paths of the files, which were utilized for saving results in the last section.
+
 # Citation
 ## Paper Reference
 S. Ullah, H. Wang, S. Menzel, B. Sendhoff and T. Bäck, "An Empirical Comparison of Meta-Modeling Techniques for Robust Design Optimization," 2019 IEEE Symposium Series on Computational Intelligence (SSCI), 2019, pp. 819-828.
