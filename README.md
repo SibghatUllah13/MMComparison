@@ -38,7 +38,7 @@ All four required packages can be installed by executing `pip install -r require
 | Package | Description |
 | --- | --- |
 | pyDOE | For sampling plans and Design of Experiment (DoE).  |
-| SciPy | For numerical optimization based on L-BFGS-B algorithm. |
+| SciPy | For optimization based on Sequential Quadratic Programming. |
 | pandas | For data manipulation and transformation. |
 | scikit-learn | For constructing the Kriging surrogate, as well as data manipulation. |
 
